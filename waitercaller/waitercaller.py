@@ -132,8 +132,8 @@ def account_deletetable():
 @app.route("/newrequest/<tid>")
 def new_request(tid):
     if DB.add_request(tid, datetime.datetime.now()):
-        return "Your request has been logged and a waiter will be with you shortly"
-    return "There is already a request pending for this table. Please be patient, a waiter will be there ASAP"
+        return ("Your request has been logged and a waiter will be with you shortly")
+    return ("There is already a request pending for this table. Please be patient, a waiter will be there ASAP")
 
 
 if __name__ == '__main__':
